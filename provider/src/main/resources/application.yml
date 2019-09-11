@@ -1,0 +1,22 @@
+server:
+  port: 8889
+spring:
+  application:
+    name: provider
+  dubbo:
+    appname: provider
+    registry: zookeeper://127.0.0.1:2181
+    protocol: dubbo
+    port: 20880
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/travel?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: 123
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.jk.api.model
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+

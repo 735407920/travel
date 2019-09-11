@@ -1,0 +1,22 @@
+server:
+  port: 8888
+spring:
+  data:
+    elasticsearch:
+      cluster-nodes: 127.0.0.1:9300
+      cluster-name: elasticsearch
+  thymeleaf:
+    cache: false
+    mode: HTML
+  dubbo:
+    appname: consumer
+    registry: zookeeper://127.0.0.1:2181
+    protocol: dubbo
+    port: 20881
+
+
+
+
+
+
+
